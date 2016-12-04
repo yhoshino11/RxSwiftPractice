@@ -56,16 +56,13 @@ class AnimationCircleView: UIImageView {
     
     private func animate(duration: Float, from: Float, to: Float) {
         
-        func circleAnimation(duration: Float, from: Float, to: Float) -> CABasicAnimation {
-            let anim = CABasicAnimation(keyPath: "strokeEnd")
-            anim.duration = CFTimeInterval(duration)
-            anim.fromValue = from
-            anim.toValue = to
-            anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-            return anim
-        }
-
+        let anim = CABasicAnimation(keyPath: "strokeEnd")
+        anim.duration = CFTimeInterval(duration)
+        anim.fromValue = from
+        anim.toValue = to
+        anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        
         self.progressLayer.strokeEnd = CGFloat(to)
-        self.progressLayer.add(circleAnimation(duration: duration, from: from, to: to), forKey: nil)
+        self.progressLayer.add(anim, forKey: nil)
     }
 }
