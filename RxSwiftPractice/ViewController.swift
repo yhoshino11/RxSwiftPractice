@@ -10,16 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var circleView: StrokeCircleView!
+    var currentProgress : Float = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        circleView.setupLayer()
     }
-
+    
+    @IBAction func updateCircleProgress(_ sender: UIButton) {
+        if self.currentProgress == 1.0 {
+            sender.isEnabled = false
+            return
+        }
+        self.currentProgress = self.currentProgress + 0.1
+        circleView.animateCircle(duration: 0.1, progress: self.currentProgress)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
 }
-
