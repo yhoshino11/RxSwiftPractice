@@ -8,55 +8,54 @@
 
 import UIKit
 
-class AnimationCircleView: UIView {
+class AnimationCircleView: UIImageView {
     
-    var pathLayer: CAShapeLayer!
+    var circleLayer: CAShapeLayer!
+    var currentProgress: Float!
     
-    func startAnimating() {
-        
-        let pi = CGFloat(M_PI)
-        let start: CGFloat = -pi / 2
-        let end: CGFloat = start
-        
-        if self.pathLayer == nil {
-            let shapeLayer = CAShapeLayer()
-            shapeLayer.strokeColor = UIColor.gray.cgColor
-            shapeLayer.fillColor = nil
-            shapeLayer.lineWidth = 1.5
-            shapeLayer.lineJoin = kCALineJoinBevel
-            self.pathLayer = shapeLayer
-        }
-        
-        let path: UIBezierPath = UIBezierPath()
-        path.move(to: CGPoint(x: self.frame.width/2, y: self.frame.height/2))
-        path.addArc(withCenter: CGPoint(x: self.frame.width/2, y: self.frame.height/2),
-                    radius: self.frame.width/2,
-                    startAngle: start,
-                    endAngle: end,
-                    clockwise: true)
-        let layer = CAShapeLayer()
-        layer.fillColor = UIColor.brown.cgColor
-        layer.path = path.cgPath
-        self.layer.addSublayer(layer)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
     
-    func updateProgress(progress: CGFloat) {
-        let basePoint: CGPoint = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
-        let pi: CGFloat = CGFloat(M_PI)
-        let start: CGFloat = -pi / 2
-        let end: CGFloat = 2 * pi * progress - pi / 2
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func setupLayer() {
+        self.currentProgress = 0.0
+        self.backgroundColor = UIColor.clear
+        let basePoint: CGPoint = CGPoint(x: bounds.size.width/2, y: bounds.size.height/2)
+        let radius: CGFloat = bounds.size.width/2
+        let pi = CGFloat(M_PI)
         
-        let path: UIBezierPath = UIBezierPath()
-        path.move(to: basePoint)
-        path.addArc(withCenter: basePoint,
-                    radius: self.frame.width / 2,
-                    startAngle: start,
-                    endAngle: end,
-                    clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: basePoint,
+                                      radius: frame.size.width/2,
+                                      startAngle: -pi / 2,
+                                      endAngle: 2 * pi - pi / 2,
+                                      clockwise: true)
         
-        let layer = CAShapeLayer()
-        layer.fillColor = UIColor.brown.cgColor
-        layer.path = path.cgPath
-        self.layer.addSublayer(layer)
+        circleLayer = CAShapeLayer()
+        circleLayer.path = circlePath.cgPath
+        circleLayer.fillColor = UIColor.clear.cgColor
+        circleLayer.strokeColor = UIColor.red.cgColor
+        circleLayer.lineWidth = radius * 2
+        
+        circleLayer.strokeEnd = 0.0
+        self.layer.mask = circleLayer
+        self.layer.masksToBounds = true
+    }
+    
+    func animateCircle(duration: Float, progress: Float) {
+        
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.duration = CFTimeInterval(duration)
+        animation.fromValue = self.currentProgress
+        animation.toValue = progress
+        
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        
+        circleLayer.strokeEnd = CGFloat(progress)
+        circleLayer.add(animation, forKey: "animateCircle")
+        self.currentProgress = progress
     }
 }

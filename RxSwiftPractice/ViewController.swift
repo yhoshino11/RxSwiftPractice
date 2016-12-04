@@ -11,10 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var circleView: StrokeCircleView!
+    @IBOutlet var animationCircleView: AnimationCircleView!
+    
     var currentProgress : Float = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         circleView.setupLayer()
+        animationCircleView.setupLayer()
     }
     
     @IBAction func updateCircleProgress(_ sender: UIButton) {
@@ -22,8 +26,9 @@ class ViewController: UIViewController {
             sender.isEnabled = false
             return
         }
-        self.currentProgress = self.currentProgress + 0.1
+        self.currentProgress = self.currentProgress + 0.05
         circleView.animateCircle(duration: 0.1, progress: self.currentProgress)
+        animationCircleView.animateCircle(duration: 0.1, progress: self.currentProgress)
     }
     
     override func didReceiveMemoryWarning() {

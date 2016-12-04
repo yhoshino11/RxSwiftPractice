@@ -29,9 +29,9 @@ class StrokeCircleView: UIView {
         let pi = CGFloat(M_PI)
         
         let circlePath = UIBezierPath(arcCenter: basePoint,
-                                      radius: radius,
+                                      radius: frame.size.width/2,
                                       startAngle: -pi / 2,
-                                      endAngle: CGFloat(M_PI * 2.0) - pi / 2,
+                                      endAngle: 2 * pi - pi / 2,
                                       clockwise: true)
         
         circleLayer = CAShapeLayer()
@@ -52,7 +52,7 @@ class StrokeCircleView: UIView {
         animation.fromValue = self.currentProgress
         animation.toValue = progress
         
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         
         circleLayer.strokeEnd = CGFloat(progress)
         circleLayer.add(animation, forKey: "animateCircle")
