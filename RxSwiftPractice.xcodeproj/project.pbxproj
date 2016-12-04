@@ -15,7 +15,7 @@
 		E2A756531DF2F3CF00AD9E55 /* AnimationCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A756521DF2F3CF00AD9E55 /* AnimationCircleView.swift */; };
 		E2A756551DF2F40300AD9E55 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A756541DF2F40300AD9E55 /* AnimationView.swift */; };
 		E2A756581DF2F71800AD9E55 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A756571DF2F71800AD9E55 /* CircleProgressView.swift */; };
-		E2A7565A1DF44B4200AD9E55 /* StrokeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A756591DF44B4200AD9E55 /* StrokeCircleView.swift */; };
+		E2A7565D1DF4596B00AD9E55 /* StrokeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7565C1DF4596B00AD9E55 /* StrokeCircleView.swift */; };
 		E2D401781DDDF8810021C3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D401771DDDF8810021C3D4 /* AppDelegate.swift */; };
 		E2D4017A1DDDF8810021C3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D401791DDDF8810021C3D4 /* ViewController.swift */; };
 		E2D4017D1DDDF8810021C3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D4017B1DDDF8810021C3D4 /* Main.storyboard */; };
@@ -59,7 +59,7 @@
 		E2A756521DF2F3CF00AD9E55 /* AnimationCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationCircleView.swift; path = Views/AnimationCircleView.swift; sourceTree = "<group>"; };
 		E2A756541DF2F40300AD9E55 /* AnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationView.swift; path = Views/AnimationView.swift; sourceTree = "<group>"; };
 		E2A756571DF2F71800AD9E55 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleProgressView.swift; path = Views/CircleProgressView.swift; sourceTree = "<group>"; };
-		E2A756591DF44B4200AD9E55 /* StrokeCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StrokeCircleView.swift; path = Views/StrokeCircleView.swift; sourceTree = "<group>"; };
+		E2A7565C1DF4596B00AD9E55 /* StrokeCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StrokeCircleView.swift; path = AnimationCircleView/StrokeCircleView.swift; sourceTree = "<group>"; };
 		E2D401741DDDF8810021C3D4 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D401771DDDF8810021C3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D401791DDDF8810021C3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		E2A7565B1DF4591500AD9E55 /* AnimationCircleView */ = {
 			isa = PBXGroup;
 			children = (
-				E2A756591DF44B4200AD9E55 /* StrokeCircleView.swift */,
+				E2A7565C1DF4596B00AD9E55 /* StrokeCircleView.swift */,
 			);
 			name = AnimationCircleView;
 			sourceTree = "<group>";
@@ -501,7 +501,7 @@
 				E2A756551DF2F40300AD9E55 /* AnimationView.swift in Sources */,
 				E2A756581DF2F71800AD9E55 /* CircleProgressView.swift in Sources */,
 				E2A756531DF2F3CF00AD9E55 /* AnimationCircleView.swift in Sources */,
-				E2A7565A1DF44B4200AD9E55 /* StrokeCircleView.swift in Sources */,
+				E2A7565D1DF4596B00AD9E55 /* StrokeCircleView.swift in Sources */,
 				E2D4017A1DDDF8810021C3D4 /* ViewController.swift in Sources */,
 				E2A756511DF2F39F00AD9E55 /* AnimationLayer.swift in Sources */,
 				E2A7564D1DF2F34900AD9E55 /* SampleAnimationView.swift in Sources */,
