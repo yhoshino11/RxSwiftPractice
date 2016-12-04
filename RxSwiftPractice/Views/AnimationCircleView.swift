@@ -10,52 +10,62 @@ import UIKit
 
 class AnimationCircleView: UIImageView {
     
-    var circleLayer: CAShapeLayer!
-    var currentProgress: Float!
+    var duration: Float = 0.1
+    var progress: Float = 0.0 {
+        didSet {
+            guard oldValue <= 1.0 else {
+                return
+            }
+            self.animate(duration: self.duration, from: oldValue, to: progress)
+        }
+    }
+    
+    private var progressLayer: CAShapeLayer!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = UIColor.clear
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func setupLayer() {
-        self.currentProgress = 0.0
-        self.backgroundColor = UIColor.clear
-        let basePoint: CGPoint = CGPoint(x: bounds.size.width/2, y: bounds.size.height/2)
-        let radius: CGFloat = bounds.size.width/2
-        let pi = CGFloat(M_PI)
-        
-        let circlePath = UIBezierPath(arcCenter: basePoint,
-                                      radius: frame.size.width/2,
-                                      startAngle: -pi / 2,
-                                      endAngle: 2 * pi - pi / 2,
-                                      clockwise: true)
-        
-        circleLayer = CAShapeLayer()
-        circleLayer.path = circlePath.cgPath
-        circleLayer.fillColor = UIColor.clear.cgColor
-        circleLayer.strokeColor = UIColor.white.cgColor
-        circleLayer.lineWidth = radius * 2
-        
-        circleLayer.strokeEnd = 0.0
-        self.layer.mask = circleLayer
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.initializeProgressLayer()
+        self.layer.mask = self.progressLayer
         self.layer.masksToBounds = true
     }
     
-    func animateCircle(duration: Float, progress: Float) {
+    private func initializeProgressLayer() {
+        let basePoint: CGPoint = CGPoint(x: bounds.size.width / 2, y: bounds.size.height / 2)
+        let pi = CGFloat(M_PI)
+        let start = -pi / 2
+        let end = pi * 2 - pi / 2
+        let radius: CGFloat = bounds.size.width / 2
+        let circlePath = UIBezierPath(arcCenter: basePoint, radius: radius, startAngle: start, endAngle: end, clockwise: true)
         
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.duration = CFTimeInterval(duration)
-        animation.fromValue = self.currentProgress
-        animation.toValue = progress
+        self.progressLayer = CAShapeLayer()
+        self.progressLayer.path = circlePath.cgPath
+        self.progressLayer.fillColor = nil
+        self.progressLayer.strokeColor = UIColor.white.cgColor
+        self.progressLayer.lineWidth = radius * 2
+        self.progressLayer.strokeEnd = 0.0
+    }
+    
+    private func animate(duration: Float, from: Float, to: Float) {
         
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        
-        circleLayer.strokeEnd = CGFloat(progress)
-        circleLayer.add(animation, forKey: "animateCircle")
-        self.currentProgress = progress
+        func circleAnimation(duration: Float, from: Float, to: Float) -> CABasicAnimation {
+            let anim = CABasicAnimation(keyPath: "strokeEnd")
+            anim.duration = CFTimeInterval(duration)
+            anim.fromValue = from
+            anim.toValue = to
+            anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+            return anim
+        }
+
+        self.progressLayer.strokeEnd = CGFloat(to)
+        self.progressLayer.add(circleAnimation(duration: duration, from: from, to: to), forKey: nil)
     }
 }

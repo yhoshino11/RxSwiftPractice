@@ -12,20 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet var animationCircleView: AnimationCircleView!
     
-    var currentProgress : Float = 0.0
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        animationCircleView.setupLayer()
+        animationCircleView.duration = 0.1
     }
     
     @IBAction func updateCircleProgress(_ sender: UIButton) {
-        if self.currentProgress == 1.0 {
-            sender.isEnabled = false
-            return
-        }
-        self.currentProgress = self.currentProgress + 0.05
-        animationCircleView.animateCircle(duration: 0.1, progress: self.currentProgress)
+        self.animationCircleView.progress += 0.05
     }
     
     override func didReceiveMemoryWarning() {
