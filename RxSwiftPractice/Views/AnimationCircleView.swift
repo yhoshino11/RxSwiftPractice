@@ -37,7 +37,7 @@ class AnimationCircleView: UIImageView {
         circleLayer = CAShapeLayer()
         circleLayer.path = circlePath.cgPath
         circleLayer.fillColor = UIColor.clear.cgColor
-        circleLayer.strokeColor = UIColor.red.cgColor
+        circleLayer.strokeColor = UIColor.white.cgColor
         circleLayer.lineWidth = radius * 2
         
         circleLayer.strokeEnd = 0.0

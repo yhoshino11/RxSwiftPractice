@@ -29,14 +29,9 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="snufkin" translatesAutoresizingMaskIntoConstraints="NO" id="YdK-6D-OPo" customClass="AnimationCircleView" customModule="RxSwiftPractice" customModuleProvider="target">
-                                <frame key="frameInset" minX="508" minY="313" width="240" height="240"/>
+                                <frame key="frameInset" minX="204" minY="332" width="360" height="360"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xi-MQ-qE1" customClass="StrokeCircleView" customModule="RxSwiftPractice" customModuleProvider="target">
-                                <frame key="frameInset" minX="20" minY="313" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -49,7 +44,6 @@
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <outlet property="animationCircleView" destination="YdK-6D-OPo" id="CSi-bA-nZH"/>
-                        <outlet property="circleView" destination="0xi-MQ-qE1" id="ffj-oq-vlb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

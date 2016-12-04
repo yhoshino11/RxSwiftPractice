@@ -9,13 +9,7 @@
 /* Begin PBXBuildFile section */
 		2EF98CFDB2A23F846676D3C0 /* Pods_RxSwiftPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BD218AAC2AF463C57F6E17 /* Pods_RxSwiftPractice.framework */; };
 		531151EECD8CAF0C15E438BA /* Pods_RxSwiftPracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118CAA3B012D4930E4A85E85 /* Pods_RxSwiftPracticeUITests.framework */; };
-		E2A7564D1DF2F34900AD9E55 /* SampleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7564C1DF2F34900AD9E55 /* SampleAnimationView.swift */; };
-		E2A7564F1DF2F37C00AD9E55 /* MaskImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7564E1DF2F37C00AD9E55 /* MaskImageView.swift */; };
-		E2A756511DF2F39F00AD9E55 /* AnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A756501DF2F39F00AD9E55 /* AnimationLayer.swift */; };
 		E2A756531DF2F3CF00AD9E55 /* AnimationCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A756521DF2F3CF00AD9E55 /* AnimationCircleView.swift */; };
-		E2A756551DF2F40300AD9E55 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A756541DF2F40300AD9E55 /* AnimationView.swift */; };
-		E2A756581DF2F71800AD9E55 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A756571DF2F71800AD9E55 /* CircleProgressView.swift */; };
-		E2A7565D1DF4596B00AD9E55 /* StrokeCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2A7565C1DF4596B00AD9E55 /* StrokeCircleView.swift */; };
 		E2D401781DDDF8810021C3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D401771DDDF8810021C3D4 /* AppDelegate.swift */; };
 		E2D4017A1DDDF8810021C3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D401791DDDF8810021C3D4 /* ViewController.swift */; };
 		E2D4017D1DDDF8810021C3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2D4017B1DDDF8810021C3D4 /* Main.storyboard */; };
@@ -53,13 +47,7 @@
 		862B925F86085204A99D2A4F /* Pods-RxSwiftPracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPracticeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftPracticeUITests/Pods-RxSwiftPracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A76082300F3BA86C307C5447 /* Pods-RxSwiftPractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftPractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftPractice/Pods-RxSwiftPractice.release.xcconfig"; sourceTree = "<group>"; };
 		DA278A2593E32E7ED5D4D9F0 /* Pods_RxSwiftPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2A7564C1DF2F34900AD9E55 /* SampleAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleAnimationView.swift; path = Views/SampleAnimationView.swift; sourceTree = "<group>"; };
-		E2A7564E1DF2F37C00AD9E55 /* MaskImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MaskImageView.swift; path = Views/MaskImageView.swift; sourceTree = "<group>"; };
-		E2A756501DF2F39F00AD9E55 /* AnimationLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationLayer.swift; path = Views/AnimationLayer.swift; sourceTree = "<group>"; };
 		E2A756521DF2F3CF00AD9E55 /* AnimationCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationCircleView.swift; path = Views/AnimationCircleView.swift; sourceTree = "<group>"; };
-		E2A756541DF2F40300AD9E55 /* AnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimationView.swift; path = Views/AnimationView.swift; sourceTree = "<group>"; };
-		E2A756571DF2F71800AD9E55 /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleProgressView.swift; path = Views/CircleProgressView.swift; sourceTree = "<group>"; };
-		E2A7565C1DF4596B00AD9E55 /* StrokeCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StrokeCircleView.swift; path = AnimationCircleView/StrokeCircleView.swift; sourceTree = "<group>"; };
 		E2D401741DDDF8810021C3D4 /* RxSwiftPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D401771DDDF8810021C3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2D401791DDDF8810021C3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,19 +116,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E2A7564B1DF2F31D00AD9E55 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E2A7564C1DF2F34900AD9E55 /* SampleAnimationView.swift */,
-				E2A7564E1DF2F37C00AD9E55 /* MaskImageView.swift */,
-				E2A756501DF2F39F00AD9E55 /* AnimationLayer.swift */,
-				E2A756521DF2F3CF00AD9E55 /* AnimationCircleView.swift */,
-				E2A756541DF2F40300AD9E55 /* AnimationView.swift */,
-				E2A756571DF2F71800AD9E55 /* CircleProgressView.swift */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		E2A756561DF2F42500AD9E55 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +127,7 @@
 		E2A7565B1DF4591500AD9E55 /* AnimationCircleView */ = {
 			isa = PBXGroup;
 			children = (
-				E2A7565C1DF4596B00AD9E55 /* StrokeCircleView.swift */,
+				E2A756521DF2F3CF00AD9E55 /* AnimationCircleView.swift */,
 			);
 			name = AnimationCircleView;
 			sourceTree = "<group>";
@@ -184,7 +159,6 @@
 			children = (
 				E2A7565B1DF4591500AD9E55 /* AnimationCircleView */,
 				E2A756561DF2F42500AD9E55 /* ViewControllers */,
-				E2A7564B1DF2F31D00AD9E55 /* Views */,
 				E2D401771DDDF8810021C3D4 /* AppDelegate.swift */,
 				E2D4017B1DDDF8810021C3D4 /* Main.storyboard */,
 				E2D401811DDDF8810021C3D4 /* Assets.xcassets */,
@@ -497,14 +471,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2A7564F1DF2F37C00AD9E55 /* MaskImageView.swift in Sources */,
-				E2A756551DF2F40300AD9E55 /* AnimationView.swift in Sources */,
-				E2A756581DF2F71800AD9E55 /* CircleProgressView.swift in Sources */,
 				E2A756531DF2F3CF00AD9E55 /* AnimationCircleView.swift in Sources */,
-				E2A7565D1DF4596B00AD9E55 /* StrokeCircleView.swift in Sources */,
 				E2D4017A1DDDF8810021C3D4 /* ViewController.swift in Sources */,
-				E2A756511DF2F39F00AD9E55 /* AnimationLayer.swift in Sources */,
-				E2A7564D1DF2F34900AD9E55 /* SampleAnimationView.swift in Sources */,
 				E2D401801DDDF8810021C3D4 /* RxSwiftPractice.xcdatamodeld in Sources */,
 				E2D401781DDDF8810021C3D4 /* AppDelegate.swift in Sources */,
 			);
